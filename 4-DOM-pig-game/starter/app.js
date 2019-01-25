@@ -51,7 +51,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         document.getElementById('dice-2').src = 'dice-' + dice2 + '.png';
 
         //update the round score IF the rolled number is not 1
-        if ((dice1 === 6 && lastDice === 6) || (dice1 === 6 && lastDice2 === 6)) {
+        if ((dice1 === 6 && lastDice === 6) || (dice1 === 6 && dice2 === 6) || (dice2 === 6 && lastDice2 === 6)) {
             //player looses score
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = '0';
